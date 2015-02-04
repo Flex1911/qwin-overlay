@@ -17,11 +17,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 S="${WORKDIR}/Telegram"
+IUSE="+updater"
 
 DEPEND="x11-libs/libX11 x11-libs/libXau x11-libs/libXdmcp"
 RDEPEND="${DEPEND}"
 
 src_install() {
 	dobin Telegram
+        if use updater ; then
+		dobin Updater
+	fi
         make_desktop_entry "Telegram" "Telegram" "Telegram"
 }
