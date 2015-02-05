@@ -73,6 +73,8 @@ DEPEND="${COMMON_DEPEND}
 	>=dev-util/gtk-doc-am-1.20
 	sys-devel/gettext
 	virtual/pkgconfig[${MULTILIB_USEDEP}]
+        media-fonts/font-misc-misc
+        media-fonts/font-cursor-misc
 	X? (
 		x11-proto/xextproto[${MULTILIB_USEDEP}]
 		x11-proto/xproto[${MULTILIB_USEDEP}]
@@ -80,9 +82,6 @@ DEPEND="${COMMON_DEPEND}
 		x11-proto/damageproto[${MULTILIB_USEDEP}]
 		xinerama? ( x11-proto/xineramaproto[${MULTILIB_USEDEP}] )
 	)
-	test? (
-		media-fonts/font-misc-misc
-		media-fonts/font-cursor-misc )
 "
 # gtk+-3.2.2 breaks Alt key handling in <=x11-libs/vte-0.30.1:2.90
 # gtk+-3.3.18 breaks scrolling in <=x11-libs/vte-0.31.0:2.90
@@ -121,11 +120,9 @@ src_prepare() {
 	replace-flags -O3 -O2
 	strip-flags
 
-	if ! use test ; then
 		# don't waste time building tests
-		strip_builddir SRC_SUBDIRS testsuite Makefile.{am,in}
-		strip_builddir SRC_SUBDIRS tests Makefile.{am,in}
-	fi
+		#strip_builddir SRC_SUBDIRS testsuite Makefile.{am,in}
+		#strip_builddir SRC_SUBDIRS tests Makefile.{am,in}
 
 	if ! use examples; then
 		# don't waste time building demos
