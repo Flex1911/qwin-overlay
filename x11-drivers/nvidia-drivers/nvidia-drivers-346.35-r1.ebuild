@@ -180,6 +180,8 @@ src_prepare() {
 
         if use git_kernel; then
                 epatch "${FILESDIR}"/${PN}-compat.patch
+		# patch for 4.0 kernel
+		epatch "${FILESDIR}"/${PN}-cr4-compat.patch
         fi
 
 	# Allow user patches so they can support RC kernels and whatever else
