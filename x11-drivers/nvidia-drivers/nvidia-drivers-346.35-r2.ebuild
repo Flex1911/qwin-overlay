@@ -13,7 +13,7 @@ AMD64_NV_PACKAGE="NVIDIA-Linux-x86_64-${PV}"
 X86_FBSD_NV_PACKAGE="NVIDIA-FreeBSD-x86-${PV}"
 AMD64_FBSD_NV_PACKAGE="NVIDIA-FreeBSD-x86_64-${PV}"
 
-DESCRIPTION="NVIDIA Accelerated Graphics Driver"
+DESCRIPTION="NVIDIA Accelerated Graphics Driver with Qwin patchset"
 HOMEPAGE="http://www.nvidia.com/"
 SRC_URI="
 	amd64-fbsd? ( ${NV_URI}FreeBSD-x86_64/${PV}/${AMD64_FBSD_NV_PACKAGE}.tar.gz )
@@ -183,6 +183,8 @@ src_prepare() {
 		# patch for 4.0 kernel
 		epatch "${FILESDIR}"/${PN}-cr4-compat.patch
         fi
+
+        epatch "${FILESDIR}"/${PN}-${PV}-emit-stacktrace.patch
 
 	# Allow user patches so they can support RC kernels and whatever else
 	epatch_user
