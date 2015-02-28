@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.14.9.ebuild,v 1.1 2015/02/26 20:15:19 pacho Exp $
+# $Header: $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -112,16 +112,12 @@ strip_builddir() {
 src_prepare() {
 	# https://bugzilla.gnome.org/show_bug.cgi?id=738835
 	#epatch "${FILESDIR}"/${PN}-non-bash-support.patch
+        epatch "${FILESDIR}"/${PN}-disable-guic.patch
 
 	# -O3 and company cause random crashes in applications. Bug #133469
 	replace-flags -O3 -O2
 	strip-flags
 
-	if ! use test ; then
-		# don't waste time building tests
-		strip_builddir SRC_SUBDIRS testsuite Makefile.{am,in}
-		strip_builddir SRC_SUBDIRS tests Makefile.{am,in}
-	fi
 
 	if ! use examples; then
 		# don't waste time building demos
