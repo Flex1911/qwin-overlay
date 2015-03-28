@@ -28,8 +28,8 @@ COMMON_DEPEND="
 	>=dev-libs/glib-2.39.1:2
 	>=dev-libs/gjs-1.39
 	>=dev-libs/gobject-introspection-0.10.1
-	>=x11-libs/gtk+-3.13.2:3[introspection]
-	>=media-libs/clutter-1.15.90:1.0[introspection]
+	>=x11-libs/gtk+-3.15:3[introspection]
+	>=media-libs/clutter-1.21.5:1.0[introspection]
 	>=dev-libs/json-glib-0.13.2
 	>=dev-libs/libcroco-0.6.8:0.6
 	>=gnome-base/gnome-desktop-3.7.90:3=[introspection]
