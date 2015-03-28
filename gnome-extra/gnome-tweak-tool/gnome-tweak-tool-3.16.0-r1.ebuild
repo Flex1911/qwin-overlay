@@ -44,10 +44,10 @@ DEPEND="${COMMON_DEPEND}
 
 src_prepare() {
 	# Add contents of Gentoo's cursor theme directory to cursor theme list
-	#epatch "${FILESDIR}/${PN}-3.10.1-gentoo-cursor-themes.patch"
+	epatch "${FILESDIR}/${PN}-3.10.1-gentoo-cursor-themes.patch"
 
 	# Prevent problems setting WM preferences, upstream bug #706834
-	#epatch "${FILESDIR}/${PN}-3.8.1-wm-preferences.patch"
+	epatch "${FILESDIR}/${PN}-3.8.1-wm-preferences.patch"
 
 	gnome2_src_prepare
 	python_copy_sources
