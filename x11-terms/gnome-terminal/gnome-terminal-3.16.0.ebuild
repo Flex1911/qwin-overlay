@@ -46,10 +46,10 @@ DOC_CONTENTS="To get previous working directory inherited in new opened
 
 src_prepare() {
 	# client: Hide obsolete --title option (from '3.14')
-	epatch "${FILESDIR}/${P}-title-option.patch"
+	#epatch "${FILESDIR}/${P}-title-option.patch"
 
 	# screen: Fix crash with empty child process command line (from '3.14')
-	epatch "${FILESDIR}/${P}-fix-crash.patch"
+	#epatch "${FILESDIR}/${P}-fix-crash.patch"
 
 	gnome2_src_prepare
 }
