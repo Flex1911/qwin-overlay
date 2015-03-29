@@ -1,0 +1,23 @@
+GNOME 3.16
+
+Status: Build successfully, most of the components works as it should.
+
+ISSUES:
+GTK+:
+- for now,gtk-update-icon-cache disabled by patch,because it causes file 
+collisions between GTK+2 and GTK+3
+- builds only with the included tests (forced for now) due to assembly 
+errors of gtkgears
+
+gnome-settings-daemon and gnome-control-center:
+- not available patches for wacom and colord,because of what now 
+their building is required
+
+Common:
+- version depenencies isn't correct for some ebuilds.
+
+
+Installing: 
+Just install base gnome from portage and update it from my overlay.
+
+  
