@@ -156,9 +156,9 @@ src_configure() {
 	if ! use ia64; then
 		append-ldflags "-Wl,--no-keep-memory"
 	fi
-	if ! $(tc-getLD) --version | grep -q "GNU gold"; then
-		append-ldflags "-Wl,--reduce-memory-overheads"
-	fi
+	#if ! $(tc-getLD) --version | grep -q "GNU gold"; then
+	#	append-ldflags "-Wl,--reduce-memory-overheads"
+	#fi
 
 	local ruby_interpreter=""
 
