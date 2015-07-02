@@ -9,8 +9,8 @@ inherit eutils
 DESCRIPTION="Telegram desktop client(binary)"
 HOMEPAGE="https://desktop.telegram.org/"
 SRC_URI="${SRC_URI}
-	amd64? ( https://updates.tdesktop.com/tlinux/tsetup.0.8.13.tar.xz )
-	x86? ( https://updates.tdesktop.com/tlinux32/tsetup32.0.8.13.tar.xz )"
+	amd64? ( https://updates.tdesktop.com/tlinux/tsetup.${PV}.tar.xz )
+	x86? ( https://updates.tdesktop.com/tlinux32/tsetup32.${PV}.tar.xz )"
 
 LICENSE="GPL-3"
 SLOT="0"
