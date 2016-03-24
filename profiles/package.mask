@@ -1,5 +1,2 @@
-=x11-libs/gtk+-3.15.4-r1
-=x11-libs/gtk+-3.15.9
-=gnome-base/gdm-3.15.90
-=x11-themes/gnome-themes-standard-3.15.90
-=gnome-base/gnome-shell-3.15.90
+>=x11-libs/gtk+-3.16.0::qwin-overlay
+>=media-libs/clutter-1.26.0::qwin-overlay
