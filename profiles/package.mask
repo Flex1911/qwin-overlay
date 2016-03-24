@@ -1,2 +1,2 @@
-x11-libs/gtk+::qwin-overlay
-media-libs/clutter::qwin-overlay
+x11-libs/gtk+
+media-libs/clutter
