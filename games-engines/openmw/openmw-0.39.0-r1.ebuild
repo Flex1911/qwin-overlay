@@ -27,6 +27,7 @@ RDEPEND="
 	>=dev-qt/qtgui-4.7.0:4
 	media-libs/freetype:2
 	media-libs/libsdl2[X,video]
+	>=dev-games/openscenegraph-3.3.4
 	media-libs/openal
 	>=sci-physics/bullet-2.80
 	virtual/ffmpeg
